@@ -145,6 +145,11 @@ button {
 .site-nav a {
   flex: 1;
   text-align: center;
+  white-space: nowrap;
+}
+
+.nav-label-short {
+  display: none;
 }
 
 .site-nav a:hover,
@@ -174,8 +179,9 @@ button {
   margin: 0 0 18px;
   color: var(--green);
   font-family: "JetBrains Mono", monospace;
-  font-size: 13px;
-  font-weight: 700;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1.1;
   text-transform: uppercase;
 }
 
@@ -208,7 +214,7 @@ h3 {
 }
 
 .hero-text,
-.resume-copy p {
+.resume-copy p:not(.eyebrow) {
   max-width: 680px;
   color: var(--ink-soft);
   font-size: 19px;
@@ -670,6 +676,16 @@ li + li {
   }
 }
 
+@media (max-width: 720px) {
+  .site-nav .nav-label-long {
+    display: none !important;
+  }
+
+  .site-nav .nav-label-short {
+    display: inline !important;
+  }
+}
+
 @media (max-width: 560px) {
   .brand span:last-child {
     display: none;
@@ -680,7 +696,7 @@ li + li {
   }
 
   .hero-text,
-  .resume-copy p {
+  .resume-copy p:not(.eyebrow) {
     font-size: 17px;
   }
 

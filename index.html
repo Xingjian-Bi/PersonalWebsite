@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="Xingjian Bi is a full-stack developer focused on React, Next.js, TypeScript, LLM workflows, and scalable product engineering."
+      content="Xingjian Bi is a full-stack software engineer focused on React, Next.js, TypeScript, databases, and AI workflows."
     />
     <title>Xingjian Bi | Full-Stack Developer</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -14,7 +14,7 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=3" />
+    <link rel="stylesheet" href="styles.css?v=5" />
     <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" />
   </head>
   <body>
@@ -26,9 +26,12 @@
           <span>Xingjian Bi</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
-          <a href="#work">Work</a>
+          <a href="#work">Experience</a>
           <a href="#projects">Projects</a>
-          <a href="#stack">Stack</a>
+          <a href="#stack" aria-label="Technologies">
+            <span class="nav-label-long" aria-hidden="true">Technologies</span>
+            <span class="nav-label-short" aria-hidden="true">Tech</span>
+          </a>
           <a href="#resume">Resume</a>
         </nav>
       </header>
@@ -36,11 +39,11 @@
       <main id="top">
         <section class="hero section-grid">
           <div class="hero-copy">
-            <p class="eyebrow">Full-stack developer · LLM product workflows</p>
-            <h1>Building fast, useful web systems with a product engineer's eye.</h1>
+            <p class="eyebrow">Full-stack software engineer · AI workflows</p>
+            <h1>Building reliable full-stack software across web, data, and AI workflows.</h1>
             <p class="hero-text">
-              I work across React, Next.js, TypeScript, Node.js, databases, and AI-assisted
-              workflows, turning messy product needs into reliable interfaces and scalable services.
+              I build React and Next.js interfaces, Node.js services, database-backed features,
+              and LLM tools that turn product requirements into maintainable software.
             </p>
             <div class="hero-actions">
               <a class="button primary" href="mailto:harry1672869@outlook.com">Contact me</a>
@@ -92,7 +95,7 @@
         <section id="work" class="content-section">
           <div class="section-heading">
             <p class="eyebrow">Experience</p>
-            <h2>Recent engineering work</h2>
+            <h2>Engineering experience</h2>
           </div>
           <div class="timeline">
             <article class="timeline-item glass-card">
@@ -102,9 +105,9 @@
                 <p class="role-title">Full Stack Developer · Remote, USA</p>
               </div>
               <ul>
-                <li>Developed and maintained a purchase-order statistics dashboard with React, Next.js, and TypeScript.</li>
-                <li>Designed LLM-powered data analysis flows with prompt engineering and structured output parsing.</li>
-                <li>Deployed serverless frontend architecture with Vercel and managed data through AWS RDS.</li>
+                <li>Owned full-stack features for a clinic care portal, spanning React/Next.js UI, API routes, Prisma, and PostgreSQL schema design.</li>
+                <li>Built analytics workflows for purchase-order reporting and LLM-powered data analysis with structured output parsing.</li>
+                <li>Implemented JWT/cookie-based authentication and deployed serverless frontend infrastructure with Vercel and AWS RDS.</li>
               </ul>
             </article>
 
@@ -153,7 +156,7 @@
           <div class="section-heading">
             <div>
               <p class="eyebrow">Projects</p>
-              <h2>Selected builds across product and academic work</h2>
+              <h2>Selected projects</h2>
             </div>
             <div class="project-controls" aria-label="Project carousel controls">
               <button class="carousel-button" type="button" data-project-prev aria-label="Previous project">
@@ -168,6 +171,33 @@
             <div class="project-grid" data-project-track>
               <article class="project-card glass-card">
                 <div class="project-index">01</div>
+                <h3>Personal Media Library</h3>
+                <p>
+                  Private full-stack media library for uploading, organizing, and previewing
+                  personal files, built with Next.js, Prisma, Postgres, and Cloudflare R2 signed URLs.
+                </p>
+                <div class="tag-row">
+                  <span>Next.js</span>
+                  <span>Prisma</span>
+                  <span>Cloudflare R2</span>
+                </div>
+              </article>
+              <article class="project-card glass-card">
+                <div class="project-index">02</div>
+                <h3>Grid-Based Logic Puzzle Game</h3>
+                <p>
+                  Web puzzle game where players place and rotate pieces on a grid to satisfy row
+                  and column targets, with drag-and-drop interaction, progressive hints, custom
+                  stages, and database-backed level storage.
+                </p>
+                <div class="tag-row">
+                  <span>Next.js</span>
+                  <span>TypeScript</span>
+                  <span>Neon Postgres</span>
+                </div>
+              </article>
+              <article class="project-card glass-card">
+                <div class="project-index">03</div>
                 <h3>NutriSwap Personalized Nutrition App</h3>
                 <p>
                   AI-driven meal substitution and nutrition guidance built with React, Chakra UI,
@@ -180,7 +210,7 @@
                 </div>
               </article>
               <article class="project-card glass-card">
-                <div class="project-index">02</div>
+                <div class="project-index">04</div>
                 <h3>ShopNet eCommerce Platform</h3>
                 <p>
                   Full-stack eCommerce platform with JWT authentication, HTTP-only cookies, Redux
@@ -193,7 +223,7 @@
                 </div>
               </article>
               <article class="project-card glass-card">
-                <div class="project-index">03</div>
+                <div class="project-index">05</div>
                 <h3>Architecture Travel Planning Website</h3>
                 <p>
                   Travel planning site for architecture lovers with multiday itineraries,
@@ -207,7 +237,7 @@
                 </div>
               </article>
               <article class="project-card glass-card">
-                <div class="project-index">04</div>
+                <div class="project-index">06</div>
                 <h3>Chinese Study iOS App</h3>
                 <p>
                   SwiftUI learning app with flashcards, multiple-choice practice, dictionary
@@ -221,7 +251,7 @@
                 </div>
               </article>
               <article class="project-card glass-card">
-                <div class="project-index">05</div>
+                <div class="project-index">07</div>
                 <h3>Personal Safety Android App</h3>
                 <p>
                   Android safety app using accelerometer, GPS, Google Maps, Firebase Realtime
@@ -239,8 +269,8 @@
 
         <section id="stack" class="content-section stack-section">
           <div class="section-heading">
-            <p class="eyebrow">Stack</p>
-            <h2>Tools I use to ship</h2>
+            <p class="eyebrow">Technologies</p>
+            <h2>Languages, frameworks, and tools</h2>
           </div>
           <div class="stack-board glass-card">
             <div>
@@ -265,17 +295,16 @@
         <section id="resume" class="content-section resume-section">
           <div class="resume-copy">
             <p class="eyebrow">Resume</p>
-            <h2>One-page resume, ready to share.</h2>
+            <h2>Resume PDF</h2>
             <p>
-              The page is shaped around the resume content, with the original PDF included for
-              recruiters, referrals, and quick forwarding.
+              Open the one-page PDF for recruiters, referrals, and quick sharing.
             </p>
-            <a class="button primary" href="assets/xingjian-bi-resume.pdf" target="_blank" rel="noreferrer">
+            <a class="button primary" href="assets/xingjian-bi-resume.pdf?v=3" target="_blank" rel="noreferrer">
               Open PDF
             </a>
           </div>
-          <a class="resume-preview glass-card" href="assets/xingjian-bi-resume.pdf" target="_blank" rel="noreferrer">
-            <img src="assets/resume-preview.png?v=2" alt="Preview of Xingjian Bi's resume" />
+          <a class="resume-preview glass-card" href="assets/xingjian-bi-resume.pdf?v=3" target="_blank" rel="noreferrer">
+            <img src="assets/resume-preview.png?v=4" alt="Preview of Xingjian Bi's resume" />
           </a>
         </section>
       </main>
