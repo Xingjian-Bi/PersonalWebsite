@@ -520,6 +520,55 @@ li + li {
   font-weight: 800;
 }
 
+.project-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.project-title-row h3 {
+  flex: 0 1 auto;
+  min-width: 0;
+  margin: 0;
+  white-space: nowrap;
+}
+
+.project-link-icon {
+  display: grid;
+  flex: 0 0 auto;
+  place-items: center;
+  width: 32px;
+  height: 32px;
+  border: 1px solid transparent;
+  border-radius: 7px;
+  background: transparent;
+  color: var(--ink);
+  font-family: "JetBrains Mono", monospace;
+  font-weight: 800;
+  line-height: 1;
+  text-decoration: none;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, color 180ms ease;
+}
+
+.project-link-icon svg {
+  width: 23px;
+  height: 23px;
+  stroke: currentColor;
+  stroke-width: 2.8;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
+.project-link-icon:hover {
+  transform: translateY(-2px);
+  border-color: rgba(150, 242, 178, 0.34);
+  background: rgba(150, 242, 178, 0.1);
+  color: var(--green);
+}
+
 .project-card p,
 .stack-board p {
   color: var(--ink-soft);
