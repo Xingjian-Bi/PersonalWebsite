@@ -11,19 +11,18 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700;12..96,800&family=JetBrains+Mono:wght@400;600;700;800&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="styles.css?v=6" />
+    <link rel="stylesheet" href="styles.css?v=13" />
     <link rel="icon" href="assets/favicon.svg?v=4" type="image/svg+xml" />
   </head>
   <body>
-    <canvas id="signal-canvas" aria-hidden="true"></canvas>
     <div class="page-shell">
       <header class="site-header">
         <a class="brand" href="#top" aria-label="Xingjian Bi home">
-          <span class="brand-mark">XB</span>
-          <span>Xingjian Bi</span>
+          <span class="brand-mark" aria-hidden="true">XB</span>
+          <span class="brand-name">Xingjian Bi</span>
         </a>
         <nav class="site-nav" aria-label="Primary navigation">
           <a href="#work">Experience</a>
@@ -37,10 +36,12 @@
       </header>
 
       <main id="top">
-        <section class="hero section-grid">
+        <section class="hero" aria-labelledby="hero-heading">
           <div class="hero-copy">
-            <p class="eyebrow">Full-stack software engineer · AI workflows</p>
-            <h1>Building reliable full-stack software across web, data, and AI workflows.</h1>
+            <p class="signal-label">Full-stack · AI workflows</p>
+            <h1 id="hero-heading">
+              Building reliable full-stack software across web, data, and AI.
+            </h1>
             <p class="hero-text">
               I build React and Next.js interfaces, Node.js services, database-backed features,
               and LLM tools that turn product requirements into maintainable software.
@@ -51,183 +52,240 @@
                 Copy email
               </button>
             </div>
-            <div class="hero-meta" aria-label="Contact details">
-              <span>San Jose · Remote friendly</span>
-              <span>443-564-5188</span>
-              <span>harry1672869@outlook.com</span>
-            </div>
+            <ul class="hero-meta" aria-label="Contact details">
+              <li>San Jose · Remote friendly</li>
+              <li>
+                <a href="tel:+14435645188">443-564-5188</a>
+              </li>
+              <li>
+                <a href="mailto:harry1672869@outlook.com">harry1672869@outlook.com</a>
+              </li>
+            </ul>
           </div>
 
-          <aside class="hero-panel glass-card" aria-label="Profile snapshot">
-            <div class="terminal-top">
+          <aside class="console" aria-label="Profile snapshot">
+            <div class="console-chrome" aria-hidden="true">
               <span></span>
               <span></span>
               <span></span>
             </div>
-            <div class="terminal-body">
-              <p><span class="muted">$</span> whoami</p>
-              <h2>Xingjian Bi</h2>
-              <p class="terminal-line">Full Stack Developer at Trimgen</p>
-              <p class="terminal-line">M.S. Computer Science · Northeastern University</p>
-              <div class="code-card">
-                <span>focus</span>
-                <strong>React · Next.js · TypeScript · Java · Python · LLM · AWS</strong>
+            <div class="console-body">
+              <p class="console-prompt"><span class="prompt-dollar">$</span> whoami</p>
+              <h2 class="console-name">Xingjian Bi</h2>
+              <p class="console-line">Full Stack Developer at Trimgen</p>
+              <p class="console-line">M.S. Computer Science · Northeastern University</p>
+              <div class="console-focus">
+                <span class="console-focus-key">focus</span>
+                <p class="console-focus-value">
+                  React · Next.js · TypeScript · Java · Python · LLM · AWS
+                </p>
               </div>
             </div>
           </aside>
         </section>
 
-        <section class="metrics" aria-label="Selected metrics">
-          <article>
-            <span>35%</span>
-            <p>faster purchase-order dashboard page loads</p>
+        <section class="proof" aria-label="Selected impact">
+          <article class="proof-item">
+            <span class="proof-value">35%</span>
+            <p class="proof-label">faster purchase-order dashboard page loads</p>
           </article>
-          <article>
-            <span>40k</span>
-            <p>average daily searches handled in sports media tooling</p>
+          <article class="proof-item">
+            <span class="proof-value">40k</span>
+            <p class="proof-label">average daily searches in sports media tooling</p>
           </article>
-          <article>
-            <span>4.0</span>
-            <p>graduate CS GPA at Northeastern University</p>
+          <article class="proof-item">
+            <span class="proof-value">4.0</span>
+            <p class="proof-label">graduate CS GPA at Northeastern University</p>
           </article>
         </section>
 
         <section id="work" class="content-section">
-          <div class="section-heading">
-            <p class="eyebrow">Experience</p>
+          <header class="section-header">
             <h2>Engineering experience</h2>
-          </div>
-          <div class="timeline">
-            <article class="timeline-item glass-card">
-              <div>
-                <p class="role-date">Feb 2025 - Present</p>
+            <p class="section-lede">
+              Clinic software, LLM evaluation, high-traffic sports media, and full-stack product work.
+            </p>
+          </header>
+
+          <ol class="timeline">
+            <li class="timeline-item">
+              <div class="timeline-meta">
+                <p class="timeline-date">Feb 2025 – Present</p>
                 <h3>Trimgen</h3>
-                <p class="role-title">Full Stack Developer · Remote, USA</p>
+                <p class="timeline-role">Full Stack Developer · Remote, USA</p>
               </div>
-              <ul>
-                <li>Owned full-stack features for a clinic care portal, spanning React/Next.js UI, API routes, Prisma, and PostgreSQL schema design.</li>
-                <li>Built analytics workflows for purchase-order reporting and LLM-powered data analysis with structured output parsing.</li>
-                <li>Implemented JWT/cookie-based authentication and deployed serverless frontend infrastructure with Vercel and AWS RDS.</li>
+              <ul class="timeline-points">
+                <li>
+                  Owned full-stack features for a clinic care portal, spanning React/Next.js UI, API
+                  routes, Prisma, and PostgreSQL schema design.
+                </li>
+                <li>
+                  Built analytics workflows for purchase-order reporting and LLM-powered data
+                  analysis with structured output parsing.
+                </li>
+                <li>
+                  Implemented JWT/cookie-based authentication and deployed serverless frontend
+                  infrastructure with Vercel and AWS RDS.
+                </li>
               </ul>
-            </article>
+            </li>
 
-            <article class="timeline-item glass-card">
-              <div>
-                <p class="role-date">Oct 2025 - Feb 2026</p>
+            <li class="timeline-item">
+              <div class="timeline-meta">
+                <p class="timeline-date">Oct 2025 – Feb 2026</p>
                 <h3>Handshake AI Fellowship</h3>
-                <p class="role-title">LLM Evaluation Specialist · Remote, USA</p>
+                <p class="timeline-role">LLM Evaluation Specialist · Remote, USA</p>
               </div>
-              <ul>
-                <li>Applied structured evaluation frameworks to improve reliability of generated outputs.</li>
-                <li>Assessed model behavior with prompt engineering, controlled resampling, and scoring methods.</li>
-                <li>Contributed expert evaluations that refined model alignment and reduced inconsistencies.</li>
+              <ul class="timeline-points">
+                <li>
+                  Applied structured evaluation frameworks to improve reliability of generated
+                  outputs.
+                </li>
+                <li>
+                  Assessed model behavior with prompt engineering, controlled resampling, and
+                  scoring methods.
+                </li>
+                <li>
+                  Contributed expert evaluations that refined model alignment and reduced
+                  inconsistencies.
+                </li>
               </ul>
-            </article>
+            </li>
 
-            <article class="timeline-item glass-card">
-              <div>
-                <p class="role-date">Jan 2024 - May 2024</p>
+            <li class="timeline-item">
+              <div class="timeline-meta">
+                <p class="timeline-date">Jan 2024 – May 2024</p>
                 <h3>Breakingpoint Media</h3>
-                <p class="role-title">Web Developer Intern · Dover, DE</p>
+                <p class="timeline-role">Web Developer Intern · Dover, DE</p>
               </div>
-              <ul>
-                <li>Built search functionality for players, teams, and posts, supporting high-volume daily traffic.</li>
-                <li>Integrated Prisma, TypeScript, and Next.js API routes to simplify complex data queries.</li>
-                <li>Developed a Prisma client compatible with Cloudflare Workers for external data access.</li>
+              <ul class="timeline-points">
+                <li>
+                  Built search functionality for players, teams, and posts, supporting high-volume
+                  daily traffic.
+                </li>
+                <li>
+                  Integrated Prisma, TypeScript, and Next.js API routes to simplify complex data
+                  queries.
+                </li>
+                <li>
+                  Developed a Prisma client compatible with Cloudflare Workers for external data
+                  access.
+                </li>
               </ul>
-            </article>
+            </li>
 
-            <article class="timeline-item glass-card">
-              <div>
-                <p class="role-date">May 2022 - Aug 2022</p>
+            <li class="timeline-item">
+              <div class="timeline-meta">
+                <p class="timeline-date">May 2022 – Aug 2022</p>
                 <h3>Public Information Industry Group</h3>
-                <p class="role-title">Full Stack Developer Intern · Dalian, China</p>
+                <p class="timeline-role">Full Stack Developer Intern · Dalian, China</p>
               </div>
-              <ul>
+              <ul class="timeline-points">
                 <li>Developed a content management system with Java and JavaScript.</li>
-                <li>Implemented user and organization profile pages with Spring Boot, Redis, Vue, and Swagger.</li>
-                <li>Used Docker to manage MySQL and Redis containers for a cleaner development workflow.</li>
+                <li>
+                  Implemented user and organization profile pages with Spring Boot, Redis, Vue, and
+                  Swagger.
+                </li>
+                <li>
+                  Used Docker to manage MySQL and Redis containers for a cleaner development
+                  workflow.
+                </li>
               </ul>
-            </article>
-          </div>
+            </li>
+          </ol>
         </section>
 
         <section id="projects" class="content-section">
-          <div class="section-heading">
+          <header class="section-header section-header-row">
             <div>
-              <p class="eyebrow">Projects</p>
               <h2>Selected projects</h2>
+              <p class="section-lede">
+                Shipped full-stack apps — media, translation, games, commerce, and mobile.
+              </p>
             </div>
             <div class="project-controls" aria-label="Project carousel controls">
-              <button class="carousel-button" type="button" data-project-prev aria-label="Previous project">
-                &larr;
+              <button
+                class="carousel-button"
+                type="button"
+                data-project-prev
+                aria-label="Previous project"
+              >
+                ←
               </button>
-              <button class="carousel-button" type="button" data-project-next aria-label="Next project">
-                &rarr;
+              <button
+                class="carousel-button"
+                type="button"
+                data-project-next
+                aria-label="Next project"
+              >
+                →
               </button>
             </div>
-          </div>
+          </header>
+
           <div class="project-carousel">
-            <div class="project-grid" data-project-track>
-              <article class="project-card glass-card">
-                <div class="project-index">01</div>
+            <div class="project-track" data-project-track>
+              <article class="project-card">
                 <div class="project-title-row">
                   <h3>Personal Media Library</h3>
                   <a
-                    class="project-link-icon"
+                    class="project-link"
                     href="https://media-library-pied.vercel.app/login"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Open Personal Media Library"
-                    title="Open Personal Media Library"
                   >
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                      width="23"
-                      height="23"
-                      fill="none"
-                      stroke="currentColor"
-                      focusable="false"
-                    >
-                      <path d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1" />
-                      <path d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1" />
+                    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                      <path
+                        d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
                     </svg>
                   </a>
                 </div>
                 <p>
                   Private full-stack media library for uploading, organizing, and previewing
-                  personal files, built with Next.js, Prisma, Postgres, and Cloudflare R2 signed URLs.
+                  personal files, built with Next.js, Prisma, Postgres, and Cloudflare R2 signed
+                  URLs.
                 </p>
-                <div class="tag-row">
-                  <span>Next.js</span>
-                  <span>Prisma</span>
-                  <span>Cloudflare R2</span>
-                </div>
+                <ul class="tag-row">
+                  <li>Next.js</li>
+                  <li>Prisma</li>
+                  <li>Cloudflare R2</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">02</div>
+
+              <article class="project-card">
                 <div class="project-title-row">
                   <h3>AI Multilingual Translator</h3>
                   <a
-                    class="project-link-icon"
+                    class="project-link"
                     href="https://llm-translation-app.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Open AI Multilingual Translator"
-                    title="Open AI Multilingual Translator"
                   >
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                      width="23"
-                      height="23"
-                      fill="none"
-                      stroke="currentColor"
-                      focusable="false"
-                    >
-                      <path d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1" />
-                      <path d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1" />
+                    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                      <path
+                        d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
                     </svg>
                   </a>
                 </div>
@@ -235,127 +293,141 @@
                   Web translation tool for text, files, and images, powered by DeepSeek LLMs with
                   tone selection, OCR support, batch translation, and exportable results.
                 </p>
-                <div class="tag-row">
-                  <span>Next.js</span>
-                  <span>TypeScript</span>
-                  <span>DeepSeek</span>
-                  <span>OCR</span>
-                </div>
+                <ul class="tag-row">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>DeepSeek</li>
+                  <li>OCR</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">03</div>
+
+              <article class="project-card">
                 <div class="project-title-row">
                   <h3>Grid-Based Logic Puzzle Game</h3>
                   <a
-                    class="project-link-icon"
+                    class="project-link"
                     href="https://puzzle-games-ruby.vercel.app/"
                     target="_blank"
                     rel="noreferrer"
                     aria-label="Open Grid-Based Logic Puzzle Game"
-                    title="Open Grid-Based Logic Puzzle Game"
                   >
-                    <svg
-                      aria-hidden="true"
-                      viewBox="0 0 24 24"
-                      width="23"
-                      height="23"
-                      fill="none"
-                      stroke="currentColor"
-                      focusable="false"
-                    >
-                      <path d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1" />
-                      <path d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1" />
+                    <svg aria-hidden="true" viewBox="0 0 24 24" width="20" height="20" fill="none">
+                      <path
+                        d="M10.6 13.4a4.7 4.7 0 0 1 0-6.7l1.7-1.7a4.8 4.8 0 0 1 6.7 6.7l-1 1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
+                      <path
+                        d="M13.4 10.6a4.7 4.7 0 0 1 0 6.7l-1.7 1.7a4.8 4.8 0 0 1-6.7-6.7l1-1"
+                        stroke="currentColor"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                      />
                     </svg>
                   </a>
                 </div>
                 <p>
-                  Web puzzle game where players place and rotate pieces on a grid to satisfy row
-                  and column targets, with drag-and-drop interaction, progressive hints, custom
-                  stages, and database-backed level storage.
+                  Web puzzle game where players place and rotate pieces on a grid to satisfy row and
+                  column targets, with drag-and-drop interaction, progressive hints, custom stages,
+                  and database-backed level storage.
                 </p>
-                <div class="tag-row">
-                  <span>Next.js</span>
-                  <span>TypeScript</span>
-                  <span>Neon Postgres</span>
-                </div>
+                <ul class="tag-row">
+                  <li>Next.js</li>
+                  <li>TypeScript</li>
+                  <li>Neon Postgres</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">04</div>
-                <h3>NutriSwap Personalized Nutrition App</h3>
+
+              <article class="project-card">
+                <div class="project-title-row">
+                  <h3>NutriSwap Personalized Nutrition App</h3>
+                  <span class="project-link-slot" aria-hidden="true"></span>
+                </div>
                 <p>
                   AI-driven meal substitution and nutrition guidance built with React, Chakra UI,
                   Node.js, Express, MongoDB, and OpenAI API.
                 </p>
-                <div class="tag-row">
-                  <span>React</span>
-                  <span>OpenAI API</span>
-                  <span>MongoDB</span>
-                </div>
+                <ul class="tag-row">
+                  <li>React</li>
+                  <li>OpenAI API</li>
+                  <li>MongoDB</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">05</div>
-                <h3>ShopNet eCommerce Platform</h3>
+
+              <article class="project-card">
+                <div class="project-title-row">
+                  <h3>ShopNet eCommerce Platform</h3>
+                  <span class="project-link-slot" aria-hidden="true"></span>
+                </div>
                 <p>
                   Full-stack eCommerce platform with JWT authentication, HTTP-only cookies, Redux
                   state management, custom middleware, SSL setup, and production deployment.
                 </p>
-                <div class="tag-row">
-                  <span>React</span>
-                  <span>Redux</span>
-                  <span>MongoDB</span>
-                </div>
+                <ul class="tag-row">
+                  <li>React</li>
+                  <li>Redux</li>
+                  <li>MongoDB</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">06</div>
-                <h3>Architecture Travel Planning Website</h3>
+
+              <article class="project-card">
+                <div class="project-title-row">
+                  <h3>Architecture Travel Planning Website</h3>
+                  <span class="project-link-slot" aria-hidden="true"></span>
+                </div>
                 <p>
-                  Travel planning site for architecture lovers with multiday itineraries,
-                  real-time comments, accessibility improvements, and optimized CRUD workflows
-                  across 10k architecture records.
+                  Travel planning site for architecture lovers with multiday itineraries, real-time
+                  comments, accessibility improvements, and optimized CRUD workflows across 10k
+                  architecture records.
                 </p>
-                <div class="tag-row">
-                  <span>React</span>
-                  <span>Express</span>
-                  <span>MongoDB</span>
-                </div>
+                <ul class="tag-row">
+                  <li>React</li>
+                  <li>Express</li>
+                  <li>MongoDB</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">07</div>
-                <h3>Chinese Study iOS App</h3>
+
+              <article class="project-card">
+                <div class="project-title-row">
+                  <h3>Chinese Study iOS App</h3>
+                  <span class="project-link-slot" aria-hidden="true"></span>
+                </div>
                 <p>
-                  SwiftUI learning app with flashcards, multiple-choice practice, dictionary
-                  lookup, daily Chinese news content, and structured concurrency for faster data
-                  loading.
+                  SwiftUI learning app with flashcards, multiple-choice practice, dictionary lookup,
+                  daily Chinese news content, and structured concurrency for faster data loading.
                 </p>
-                <div class="tag-row">
-                  <span>Swift</span>
-                  <span>SwiftUI</span>
-                  <span>API</span>
-                </div>
+                <ul class="tag-row">
+                  <li>Swift</li>
+                  <li>SwiftUI</li>
+                  <li>API</li>
+                </ul>
               </article>
-              <article class="project-card glass-card">
-                <div class="project-index">08</div>
-                <h3>Personal Safety Android App</h3>
+
+              <article class="project-card">
+                <div class="project-title-row">
+                  <h3>Personal Safety Android App</h3>
+                  <span class="project-link-slot" aria-hidden="true"></span>
+                </div>
                 <p>
                   Android safety app using accelerometer, GPS, Google Maps, Firebase Realtime
                   Database, alert activation, friend-location views, and automated SMS messaging.
                 </p>
-                <div class="tag-row">
-                  <span>Java</span>
-                  <span>Firebase RTDB</span>
-                  <span>Google Maps</span>
-                </div>
+                <ul class="tag-row">
+                  <li>Java</li>
+                  <li>Firebase RTDB</li>
+                  <li>Google Maps</li>
+                </ul>
               </article>
             </div>
           </div>
         </section>
 
-        <section id="stack" class="content-section stack-section">
-          <div class="section-heading">
-            <p class="eyebrow">Technologies</p>
+        <section id="stack" class="content-section">
+          <header class="section-header">
             <h2>Languages, frameworks, and tools</h2>
-          </div>
-          <div class="stack-board glass-card">
+          </header>
+          <div class="stack-board">
             <div>
               <h3>Languages</h3>
               <p>Python, Java, JavaScript, TypeScript, Swift, C++</p>
@@ -369,7 +441,7 @@
               <p>Node.js, Express.js, Spring Boot, Flask, Prisma, REST APIs</p>
             </div>
             <div>
-              <h3>Data & Cloud</h3>
+              <h3>Data &amp; Cloud</h3>
               <p>MySQL, MongoDB, Firebase, GraphQL, Docker, AWS, Azure</p>
             </div>
           </div>
@@ -377,17 +449,32 @@
 
         <section id="resume" class="content-section resume-section">
           <div class="resume-copy">
-            <p class="eyebrow">Resume</p>
             <h2>Resume PDF</h2>
             <p>
-              Open the one-page PDF for recruiters, referrals, and quick sharing.
+              One-page PDF for recruiters, referrals, and quick sharing.
             </p>
-            <a class="button primary" href="assets/xingjian-bi-resume.pdf?v=4" target="_blank" rel="noreferrer">
+            <a
+              class="button primary"
+              href="assets/xingjian-bi-resume.pdf?v=4"
+              target="_blank"
+              rel="noreferrer"
+            >
               Open PDF
             </a>
           </div>
-          <a class="resume-preview glass-card" href="assets/xingjian-bi-resume.pdf?v=4" target="_blank" rel="noreferrer">
-            <img src="assets/resume-preview.png?v=5" alt="Preview of Xingjian Bi's resume" />
+          <a
+            class="resume-preview"
+            href="assets/xingjian-bi-resume.pdf?v=4"
+            target="_blank"
+            rel="noreferrer"
+          >
+            <img
+              src="assets/resume-preview.png?v=5"
+              alt="Preview of Xingjian Bi's one-page resume"
+              width="640"
+              height="828"
+              loading="lazy"
+            />
           </a>
         </section>
       </main>
@@ -398,7 +485,10 @@
       </footer>
     </div>
 
+    <button type="button" class="back-to-top" data-back-to-top aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
     <div class="toast" role="status" aria-live="polite">Email copied</div>
-    <script src="script.js?v=2"></script>
+    <script src="script.js?v=4"></script>
   </body>
 </html>
